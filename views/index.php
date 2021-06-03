@@ -4,7 +4,7 @@
     <?php
         $connection = mysqli_connect("localhost","junaid","root","crud") OR die("Connection Failed");
 
-        $query = "SELECT * FROM student AS s JOIN student_class AS c ON s.sid = c.cid";
+        $query = "SELECT * FROM student JOIN student_class ON student.sclass = student_class.cid";
 
         $result = mysqli_query($connection,$query) OR die("Query Unsuccessful");
         if(mysqli_num_rows($result)){
