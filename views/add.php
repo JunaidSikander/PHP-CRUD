@@ -14,10 +14,17 @@
             <label>Class</label>
             <select name="class">
                 <option value="" selected disabled>Select Class</option>
-                <option value="1">CS</option>
-                <option value="2">BCS</option>
-                <option value="3">CE</option>
-                <option value="4">EL</option>
+                <?php
+                $connection = mysqli_connect("localhost","junaid","root","crud") OR die("Connection Failed");
+
+                $query = "SELECT * FROM student_class";
+
+                $result = mysqli_query($connection,$query) OR die("Query Unsuccessful.");
+
+                while($option = mysqli_fetch_assoc($result)){
+                ?>
+                <option value="<?php echo $option['cid']; ?>"><?php echo $option['cname'] ?></option>
+                <?php } ?>
             </select>
         </div>
         <div class="form-group">
