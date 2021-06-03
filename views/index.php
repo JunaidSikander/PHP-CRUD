@@ -29,7 +29,7 @@
             <td><?php echo $row['cname'] ?></td>
             <td><?php echo $row['sphone'] ?></td>
             <td>
-                <a href='edit.php'>Edit</a>
+                <a href='edit.php?id=<?php echo $row['sid'] ?>'>Edit</a>
                 <a href='delete_inline.php'>Delete</a>
             </td>
         </tr>

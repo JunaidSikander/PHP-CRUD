@@ -2,33 +2,53 @@
 
 <div id="main-content">
     <h2>Update Record</h2>
+    <?php
+    $connection = mysqli_connect("localhost", "junaid", "root", "crud") or die("Connection Failed");
+
+    $s_id = $_GET['id'];
+
+    $query = "SELECT * FROM student WHERE sid = {$s_id}";
+
+    $options_query = "SELECT * FROM student_class";
+
+    $result = mysqli_query($connection, $query) or die("Query Unsuccessful");
+    $options = mysqli_query($connection, $options_query) or die("Query Unsuccessful");
+    if (mysqli_num_rows($result)) {
+    while ($row = mysqli_fetch_assoc($result)) {
+    ?>
     <form class="post-form" action="updatedata.php" method="post">
         <div class="form-group">
             <label>Name</label>
-            <input type="hidden" name="sid" value=""/>
-            <input type="text" name="sname" value=""/>
+            <input type="hidden" name="sid" value="<?php echo $row['sid'] ?>"/>
+            <input type="text" name="sname" value="<?php echo $row['sname'] ?>"/>
         </div>
         <div class="form-group">
             <label>Address</label>
-            <input type="text" name="saddress" value=""/>
+            <input type="text" name="saddress" value="<?php echo $row['saddress'] ?>"/>
         </div>
         <div class="form-group">
             <label>Class</label>
-            <select name="sclass">
-                <option value="" selected disabled>Select Class</option>
-                <option value="1">CS</option>
-                <option value="2">BCS</option>
-                <option value="3">CE</option>
-                <option value="4">EL</option>
-            </select>
+            <?php
+                if(mysqli_num_rows($options) > 0){
+                    echo '<select name="sclass">';
+                    while($option = mysqli_fetch_assoc($options)) {
+                        if($row['sclass'] == $option['cid'])
+                            $select = "selected";
+                        else
+                            $select = "";
+                        echo "<option {$select} value='{$option['cid']}'>{$option['cname']}</option>";
+
+                    }
+                    echo "</select>";
+            } ?>
         </div>
         <div class="form-group">
             <label>Phone</label>
-            <input type="text" name="sphone" value=""/>
+            <input type="text" name="sphone" value="<?php echo $row['sphone'] ?>"/>
         </div>
         <input class="submit" type="submit" value="Update"/>
     </form>
+<?php }
+}
+?>
 </div>
-</div>
-</body>
-</html>
