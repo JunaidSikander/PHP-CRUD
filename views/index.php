@@ -1,6 +1,4 @@
-<?php
-include 'components/header.php';
-?>
+<?php include("header.php"); ?>
 <div id="main-content">
     <h2>All Records</h2>
     <table cellpadding="7px">
@@ -20,8 +18,8 @@ include 'components/header.php';
             <td>CS</td>
             <td>9276543210</td>
             <td>
-                <a href='components/edit.php'>Edit</a>
-                <a href='components/delete.php'>Delete</a>
+                <a href='edit.php'>Edit</a>
+                <a href='delete_inline.php'>Delete</a>
             </td>
         </tr>
         <tr>
@@ -31,8 +29,8 @@ include 'components/header.php';
             <td>BCS</td>
             <td>9276543210</td>
             <td>
-                <a href='components/edit.php'>Edit</a>
-                <a href='components/delete.php'>Delete</a>
+                <a href='edit.php'>Edit</a>
+                <a href='delete_inline.php'>Delete</a>
             </td>
         </tr>
         <tr>
@@ -42,8 +40,8 @@ include 'components/header.php';
             <td>CE</td>
             <td>9276543210</td>
             <td>
-                <a href='components/edit.php'>Edit</a>
-                <a href='components/delete.php'>Delete</a>
+                <a href='edit.php'>Edit</a>
+                <a href='delete_inline.php'>Delete</a>
             </td>
         </tr>
         <tr>
@@ -53,8 +51,8 @@ include 'components/header.php';
             <td>EL</td>
             <td>9276543210</td>
             <td>
-                <a href='components/edit.php'>Edit</a>
-                <a href='components/delete.php'>Delete</a>
+                <a href='edit.php'>Edit</a>
+                <a href='delete_inline.php'>Delete</a>
             </td>
         </tr>
         <tr>
@@ -64,8 +62,8 @@ include 'components/header.php';
             <td>ES</td>
             <td>9276543210</td>
             <td>
-                <a href='components/edit.php'>Edit</a>
-                <a href='components/delete.php'>Delete</a>
+                <a href='edit.php'>Edit</a>
+                <a href='delete_inline.php'>Delete</a>
             </td>
         </tr>
         </tbody>
