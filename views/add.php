@@ -14,9 +14,10 @@
             <label>Class</label>
             <select name="class">
                 <option value="" selected disabled>Select Class</option>
-                <option value="1">BCA</option>
-                <option value="2">BSC</option>
-                <option value="3">B.TECH</option>
+                <option value="1">CS</option>
+                <option value="2">BCS</option>
+                <option value="3">CE</option>
+                <option value="4">EL</option>
             </select>
         </div>
         <div class="form-group">
