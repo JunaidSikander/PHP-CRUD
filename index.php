@@ -1,2 +1,2 @@
 <?php
-    echo "PHP CRUD Operations";
+    include 'components/header.php';
