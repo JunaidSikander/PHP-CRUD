@@ -30,7 +30,7 @@
             <td><?php echo $row['sphone'] ?></td>
             <td>
                 <a href='edit.php?id=<?php echo $row['sid'] ?>'>Edit</a>
-                <a href='delete_inline.php'>Delete</a>
+                <a href='delete_inline.php?id=<?php echo $row['sid'] ?>'>Delete</a>
             </td>
         </tr>
         <?php } ?>
